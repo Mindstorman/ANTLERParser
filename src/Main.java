@@ -1,8 +1,9 @@
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.*;
-import java.util.Scanner;
+
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main
 {
@@ -38,7 +39,7 @@ public class Main
         walker.walk(baseListener, tree);
 		
 		//Create a listener for pretty print
-        DOTPrettyPrintListener prettyListener = new DotPrettyPrintListener();
+        DOTPrettyPrintListener prettyListener = new DOTPrettyPrintListener();
 		//Walk the tree by attaching the listener to the walker
         walker.walk(prettyListener, tree);
     }
