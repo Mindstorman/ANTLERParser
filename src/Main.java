@@ -37,7 +37,9 @@ public class Main
 		//Create a listener for pretty print
         DOTBaseListener baseListener = new DOTBaseListener();
 		//Walk the tree by attaching the listener to the walker
-        //walker.walk(baseListener, tree);
+        walker.walk(baseListener, tree);
+
+        System.out.println("\nPretty-printed code:\n");
 
 		//Create a listener for pretty print
         DOTPrettyPrintListener prettyListener = new DOTPrettyPrintListener();
