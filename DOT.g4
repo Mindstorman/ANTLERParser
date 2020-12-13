@@ -25,7 +25,7 @@ graph
    ;
 
 stmt_list
-   : ( stmt ';'? )*
+   : ( stmt end_line? )*
    ;
 
 stmt
@@ -40,15 +40,27 @@ attr_list
    : ( '[' a_list? ']' )+
    ;
 
+end_line
+   : ';'
+   ;
+
+comma
+   : ','
+   ;
+
+assign
+   : '='
+   ;
+
 a_list
-   : ( a_list_prop ','? )+
+   : ( a_list_prop comma? )+
    ;
 
 a_list_prop
-   : ( id ( '=' id )? )
+   : ( id ( assign id )? )
    ;
 property
-  : ( id '=' id )+
+  : ( id assign id )+
   ;
 
 edge_stmt

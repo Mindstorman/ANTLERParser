@@ -57,6 +57,36 @@ public interface DOTListener extends ParseTreeListener {
 	 */
 	void exitAttr_list(DOTParser.Attr_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link DOTParser#end_line}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnd_line(DOTParser.End_lineContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DOTParser#end_line}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnd_line(DOTParser.End_lineContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DOTParser#comma}.
+	 * @param ctx the parse tree
+	 */
+	void enterComma(DOTParser.CommaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DOTParser#comma}.
+	 * @param ctx the parse tree
+	 */
+	void exitComma(DOTParser.CommaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DOTParser#assign}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssign(DOTParser.AssignContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DOTParser#assign}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssign(DOTParser.AssignContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link DOTParser#a_list}.
 	 * @param ctx the parse tree
 	 */

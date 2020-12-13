@@ -86,6 +86,36 @@ public class DOTBaseListener implements DOTListener {
 
 	@Override public void exitAttr_list(DOTParser.Attr_listContext ctx) { }
 
+	@Override
+	public void enterEnd_line(DOTParser.End_lineContext ctx) {
+
+	}
+
+	@Override
+	public void exitEnd_line(DOTParser.End_lineContext ctx) {
+
+	}
+
+	@Override
+	public void enterComma(DOTParser.CommaContext ctx) {
+
+	}
+
+	@Override
+	public void exitComma(DOTParser.CommaContext ctx) {
+
+	}
+
+	@Override
+	public void enterAssign(DOTParser.AssignContext ctx) {
+
+	}
+
+	@Override
+	public void exitAssign(DOTParser.AssignContext ctx) {
+
+	}
+
 	@Override public void enterA_list(DOTParser.A_listContext ctx) { }
 
 	@Override public void exitA_list(DOTParser.A_listContext ctx) { }
