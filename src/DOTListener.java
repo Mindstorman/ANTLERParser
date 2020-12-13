@@ -67,6 +67,26 @@ public interface DOTListener extends ParseTreeListener {
 	 */
 	void exitA_list(DOTParser.A_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link DOTParser#a_list_prop}.
+	 * @param ctx the parse tree
+	 */
+	void enterA_list_prop(DOTParser.A_list_propContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DOTParser#a_list_prop}.
+	 * @param ctx the parse tree
+	 */
+	void exitA_list_prop(DOTParser.A_list_propContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DOTParser#property}.
+	 * @param ctx the parse tree
+	 */
+	void enterProperty(DOTParser.PropertyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DOTParser#property}.
+	 * @param ctx the parse tree
+	 */
+	void exitProperty(DOTParser.PropertyContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link DOTParser#edge_stmt}.
 	 * @param ctx the parse tree
 	 */

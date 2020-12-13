@@ -1,12 +1,10 @@
 // Generated from C:\Users\legol\Documents\Platteville\Senior Year\PLS\ANTLRParser\DOT.g4 by ANTLR 4.9
-import org.antlr.v4.runtime.Lexer;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.Token;
-import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.*;
+import org.antlr.v4.runtime.atn.ATN;
+import org.antlr.v4.runtime.atn.ATNDeserializer;
+import org.antlr.v4.runtime.atn.LexerATNSimulator;
+import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class DOTLexer extends Lexer {
@@ -40,7 +38,7 @@ public class DOTLexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'{'", "'}'", "';'", "'='", "'['", "']'", "','", "'->'", "'--'", 
+			null, "'{'", "'}'", "';'", "'['", "']'", "','", "'='", "'->'", "'--'", 
 			"':'"
 		};
 	}
@@ -145,8 +143,8 @@ public class DOTLexer extends Lexer {
 		"\3\2\2\2#x\3\2\2\2%\u0090\3\2\2\2\'\u0092\3\2\2\2)\u009d\3\2\2\2+\u00a5"+
 		"\3\2\2\2-\u00a7\3\2\2\2/\u00b1\3\2\2\2\61\u00ba\3\2\2\2\63\u00c8\3\2\2"+
 		"\2\65\u00d8\3\2\2\2\67\u00e4\3\2\2\29:\7}\2\2:\4\3\2\2\2;<\7\177\2\2<"+
-		"\6\3\2\2\2=>\7=\2\2>\b\3\2\2\2?@\7?\2\2@\n\3\2\2\2AB\7]\2\2B\f\3\2\2\2"+
-		"CD\7_\2\2D\16\3\2\2\2EF\7.\2\2F\20\3\2\2\2GH\7/\2\2HI\7@\2\2I\22\3\2\2"+
+		"\6\3\2\2\2=>\7=\2\2>\b\3\2\2\2?@\7]\2\2@\n\3\2\2\2AB\7_\2\2B\f\3\2\2\2"+
+		"CD\7.\2\2D\16\3\2\2\2EF\7?\2\2F\20\3\2\2\2GH\7/\2\2HI\7@\2\2I\22\3\2\2"+
 		"\2JK\7/\2\2KL\7/\2\2L\24\3\2\2\2MN\7<\2\2N\26\3\2\2\2OP\t\2\2\2PQ\t\3"+
 		"\2\2QR\t\4\2\2RS\t\5\2\2ST\t\6\2\2TU\t\3\2\2U\30\3\2\2\2VW\t\7\2\2WX\t"+
 		"\4\2\2XY\t\b\2\2YZ\t\t\2\2Z[\t\n\2\2[\32\3\2\2\2\\]\t\13\2\2]^\t\5\2\2"+

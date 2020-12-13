@@ -31,108 +31,37 @@ public class DOTBaseListener implements DOTListener {
 
 	@Override public void exitStmt_list(DOTParser.Stmt_listContext ctx)
 	{
-		System.out.println("Finish recognizing a cluser");
+		System.out.println("Finish recognizing a cluster");
 	}
 
-	@Override public void enterStmt(DOTParser.StmtContext ctx)
-	{
-		//System.out.println("Start recognizing an edge statement");
-		//System.out.println("Jenny thinks this a cluster");
-	}
-
-	@Override public void exitStmt(DOTParser.StmtContext ctx)
-	{
-		//System.out.println("Finish recognizing an edge statement");
-	}
-
-	@Override public void enterAttr_stmt(DOTParser.Attr_stmtContext ctx)
-	{
-		//System.out.println("Start recognizing a property");
-	}
-
-	@Override public void exitAttr_stmt(DOTParser.Attr_stmtContext ctx)
-	{
-		//System.out.println("Finish recognizing a property");
-	}
-
-	@Override public void enterAttr_list(DOTParser.Attr_listContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void exitAttr_list(DOTParser.Attr_listContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void enterA_list(DOTParser.A_listContext ctx)
+	@Override public void enterA_list_prop(DOTParser.A_list_propContext ctx)
 	{
 		System.out.println("Start recognizing a property");
 	}
 
-	@Override public void exitA_list(DOTParser.A_listContext ctx)
+	@Override public void exitA_list_prop(DOTParser.A_list_propContext ctx)
+	{
+		System.out.println("Finish recognizing a property");
+	}
+
+	@Override public void enterProperty(DOTParser.PropertyContext ctx)
+	{
+		System.out.println("Start recognizing a property");
+	}
+
+	@Override public void exitProperty(DOTParser.PropertyContext ctx)
 	{
 		System.out.println("Finish recognizing a property");
 	}
 
 	@Override public void enterEdge_stmt(DOTParser.Edge_stmtContext ctx)
 	{
-		System.out.println("Start recognizing an edge statement ");
+		System.out.println("Start recognizing an edge statement");
 	}
 
 	@Override public void exitEdge_stmt(DOTParser.Edge_stmtContext ctx)
 	{
-		System.out.println("Finish recognizing an edge statement ");
-	}
-
-	@Override public void enterEdgeRHS(DOTParser.EdgeRHSContext ctx)
-	{
-		//System.out.println("Finish recognizing a ennter EDGE RHS");
-	}
-
-	@Override public void exitEdgeRHS(DOTParser.EdgeRHSContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void enterEdgeop(DOTParser.EdgeopContext ctx)
-	{
-		//System.out.println("Finish recognizing a EDGE OP");
-	}
-
-	@Override public void exitEdgeop(DOTParser.EdgeopContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void enterNode_stmt(DOTParser.Node_stmtContext ctx)
-	{
-		//System.out.println("Start recognizing a NODE???");
-	}
-
-	@Override public void exitNode_stmt(DOTParser.Node_stmtContext ctx)
-	{
-		//System.out.println("Finish recognizing a NODE???");
-	}
-
-	@Override public void enterNode_id(DOTParser.Node_idContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void exitNode_id(DOTParser.Node_idContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
-
-	@Override public void enterPort(DOTParser.PortContext ctx)
-	{
-		//System.out.println("Start recognizing a Port");
-	}
-
-	@Override public void exitPort(DOTParser.PortContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
+		System.out.println("Finish recognizing an edge statement");
 	}
 
 	@Override public void enterSubgraph(DOTParser.SubgraphContext ctx)
@@ -145,33 +74,51 @@ public class DOTBaseListener implements DOTListener {
 		System.out.println("Finish recognizing a subgraph");
 	}
 
-	@Override public void enterId(DOTParser.IdContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void enterStmt(DOTParser.StmtContext ctx) { }
 
-	@Override public void exitId(DOTParser.IdContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void exitStmt(DOTParser.StmtContext ctx) { }
 
-	@Override public void enterEveryRule(ParserRuleContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void enterAttr_stmt(DOTParser.Attr_stmtContext ctx) { }
 
-	@Override public void exitEveryRule(ParserRuleContext ctx)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void exitAttr_stmt(DOTParser.Attr_stmtContext ctx) { }
 
-	@Override public void visitTerminal(TerminalNode node)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void enterAttr_list(DOTParser.Attr_listContext ctx) { }
 
-	@Override public void visitErrorNode(ErrorNode node)
-	{
-		//System.out.println("Finish recognizing a ");
-	}
+	@Override public void exitAttr_list(DOTParser.Attr_listContext ctx) { }
+
+	@Override public void enterA_list(DOTParser.A_listContext ctx) { }
+
+	@Override public void exitA_list(DOTParser.A_listContext ctx) { }
+
+	@Override public void enterEdgeRHS(DOTParser.EdgeRHSContext ctx) { }
+
+	@Override public void exitEdgeRHS(DOTParser.EdgeRHSContext ctx) { }
+
+	@Override public void enterEdgeop(DOTParser.EdgeopContext ctx) { }
+
+	@Override public void exitEdgeop(DOTParser.EdgeopContext ctx) { }
+
+	@Override public void enterNode_stmt(DOTParser.Node_stmtContext ctx) { }
+
+	@Override public void exitNode_stmt(DOTParser.Node_stmtContext ctx) { }
+
+	@Override public void enterNode_id(DOTParser.Node_idContext ctx) { }
+
+	@Override public void exitNode_id(DOTParser.Node_idContext ctx) { }
+
+	@Override public void enterPort(DOTParser.PortContext ctx) { }
+
+	@Override public void exitPort(DOTParser.PortContext ctx) { }
+
+	@Override public void enterId(DOTParser.IdContext ctx) { }
+
+	@Override public void exitId(DOTParser.IdContext ctx) { }
+
+	@Override public void enterEveryRule(ParserRuleContext ctx) { }
+
+	@Override public void exitEveryRule(ParserRuleContext ctx) { }
+
+	@Override public void visitTerminal(TerminalNode node) { }
+
+	@Override public void visitErrorNode(ErrorNode node) { }
 }

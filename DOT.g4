@@ -29,7 +29,7 @@ stmt_list
    ;
 
 stmt
-   : node_stmt | edge_stmt | attr_stmt | id '=' id | subgraph
+   : node_stmt | edge_stmt | attr_stmt | property | subgraph
    ;
 
 attr_stmt
@@ -41,8 +41,15 @@ attr_list
    ;
 
 a_list
-   : ( id ( '=' id )? ','? )+
+   : ( a_list_prop ','? )+
    ;
+
+a_list_prop
+   : ( id ( '=' id )? )
+   ;
+property
+  : ( id '=' id )+
+  ;
 
 edge_stmt
    : ( node_id | subgraph ) edgeRHS attr_list?
