@@ -10,20 +10,21 @@ public class Main
     public static void main (String[] args) throws IOException {
 		
 		StringBuilder dotCode = new StringBuilder();
-		
+
 		Scanner stdin = new Scanner(System.in);
-		
-		while(stdin.hasNextLine()) {
+
+        while(stdin.hasNextLine()) {
 			dotCode.append(stdin.nextLine());
 		}
 
-		//Invoke a lexer for lexical anaylasis
+
+		//Invoke a lexer for lexical analysis
         DOTLexer lexer = new DOTLexer(new ANTLRInputStream(dotCode.toString()));
 		
 		//Prepare the list of tokens identified
         CommonTokenStream tokens = new CommonTokenStream(lexer);
 		
-		//Pass the token list to the parser for syntax anaylasis
+		//Pass the token list to the parser for syntax analysis
         DOTParser parser = new DOTParser(tokens);
 		
 		//Get the AST tree built for the input DOT code
@@ -37,10 +38,11 @@ public class Main
         DOTBaseListener baseListener = new DOTBaseListener();
 		//Walk the tree by attaching the listener to the walker
         walker.walk(baseListener, tree);
-		
+
 		//Create a listener for pretty print
         DOTPrettyPrintListener prettyListener = new DOTPrettyPrintListener();
 		//Walk the tree by attaching the listener to the walker
         walker.walk(prettyListener, tree);
+
     }
 }
