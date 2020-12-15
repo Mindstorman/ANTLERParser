@@ -5,10 +5,15 @@ import org.antlr.v4.runtime.tree.*;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * The main class will read in the input. The class will handle
+ * recognizing the token type and call the two different types
+ * of printing.
+ */
 public class Main
 {
+
     public static void main (String[] args) throws IOException {
-		
 		StringBuilder dotCode = new StringBuilder();
 
 		Scanner stdin = new Scanner(System.in);
@@ -16,7 +21,6 @@ public class Main
         while(stdin.hasNextLine()) {
 			dotCode.append(stdin.nextLine());
 		}
-
 
 		//Invoke a lexer for lexical analysis
         DOTLexer lexer = new DOTLexer(new ANTLRInputStream(dotCode.toString()));

@@ -2,8 +2,12 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
-public class DOTPrettyPrintListener implements DOTListener
-{
+/**
+ * This class adds additional characters needed in the printing.
+ * The end result will have a the proper structure and characters.
+ * of printing.
+ */
+public class DOTPrettyPrintListener extends DOTBaseListener {
     int indentLevel = 0;
     String tab = " ";
 
@@ -131,7 +135,6 @@ public class DOTPrettyPrintListener implements DOTListener
     public void enterProperty(DOTParser.PropertyContext ctx)
     {
         printIndent();
-        //System.out.println(ctx.children.get(0).getText() + " = " + ctx.children.get(2).getText() + ";");
     }
 
     @Override
